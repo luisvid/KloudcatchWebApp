@@ -1,0 +1,336 @@
+@import compass
+@import compass/layout
+@import compass/css3
+
+$baseFontSize: 16px
+$baseLineHeight: 21px
+$navbarLinkColor: #fff
+$navbarBackground: #1e658a
+$corp_blue_bright: #216e96
+$corp_blue_bright2: #2376a1
+$corp_blue_brighter: #d7e2e8
+$corp_blue_very_bright: #f4f8f9
+$corp_blue_dark: #1e658a
+$corp_blue_dark2: #206c94
+$corp_blue_less_dark: #217099
+$corp_blue_darker: #134761
+$corp_back_blue_dark: #d4dee6
+$corp_back_blue_bright: #f7f9fa
+$corp_white: #f5f5f5
+$tabGrey: #999999
+$corp_orange: #ffad23
+
+@import compass_twitter_bootstrap_awesome
+
+
+@import compass_twitter_bootstrap_responsive
+@include sticky-footer(50px)
+
+
+
+
+// Base classes
+
+.clearfix
+  +clearfix
+.right
+  float: right
+.left
+  float: left
+.justify
+  text-align: justify
+
+.image
+  &.right
+    margin-left: 30px
+
+.hover-link
+  +hover-link
+
+.mt_1em
+  margin-top: 1em
+
+
+// Widget classes
+
+.navbar
+  border-bottom: 1px solid $corp_blue_brighter
+  .brand
+    background: url("/assets/logo2.png") no-repeat center left
+    padding: 12px 20px 9px 67px
+    margin-left: 0
+    a
+      color: #fff
+      font-family: "Special Elite", cursive
+      font-weight: bold
+      font-size: 30px
+      text-decoration: none
+  .navbar-inner
+    +background(linear-gradient(top, $corp_blue_bright, $corp_blue_bright 20%, $corp_blue_dark))
+    li
+      a
+        padding: 16px 10px 16px 10px
+        &.signin
+          padding-top: 14px
+          i
+            margin-right: 5px
+      &:hover
+        +background(linear-gradient(top, $corp_blue_bright2, $corp_blue_bright2 20%, $corp_blue_dark2))
+        ul.dropdown-menu
+          li
+            &:hover
+              a
+                background: #fff
+                text-decoration: underline 
+      &.active
+        a
+          text-decoration: underline
+          +background(linear-gradient(top, $corp_blue_bright2, $corp_blue_bright2 20%, $corp_blue_dark2))
+        ul.dropdown-menu
+          a
+            text-decoration: none 
+    ul.dropdown-menu
+      li
+        a
+          padding: 3px 15px
+          background: #fff
+          color: #555
+  .divider-vertical
+    height: 50px
+    border: none
+
+.tab-content
+  +background(linear-gradient(top, #fff, $grayLighter))
+  +border-bottom-radius(8px)
+  +border-top-right-radius(8px)
+  border: 1px solid #ddd
+  padding: 30px
+
+
+.tab-content.main
+  +background(linear-gradient(top, $grayLighter, $corp_blue_bright))
+  border-top: none
+  margin-bottom: 0
+  border: 1px solid $corp_blue_dark
+  padding: 13px
+
+
+
+.nav-tabs
+  border-bottom: none
+  margin-bottom: 0
+  li
+    a
+      line-height: 15px
+      border-color: $corp_blue_dark
+      border-bottom-color: transparent
+      font-size: 1.1em
+      color: #fff
+      background-color: $tabGrey
+      &:hover
+        background-color: $tabGrey
+        border-color: $corp_blue_dark
+        border-bottom-color: transparent
+    &.active
+      a
+        border-color: $corp_blue_dark
+        border-bottom-color: transparent
+        background-color: $grayLighter
+        font-size: 1.3em
+        color: $corp_orange
+        &:hover
+          background-color: $grayLighter
+          color: $corp_orange
+          border-color: $corp_blue_dark
+          border-bottom-color: transparent
+  &.white
+    li
+      a
+        border-color: #ddd
+        border-bottom-color: transparent
+      &.active
+        a
+          background-color: #fff
+          border-color: #ddd
+          border-bottom-color: transparent
+
+.tabs-left
+  .nav-tabs
+    margin-right: 0
+    border-right: none
+    li
+      a
+        background-color: $tabGrey
+        font-size: 1em
+        border-color: $grayLighter
+        border-right-color: transparent
+        &:hover
+          border-color: #fff
+          border-right-color: transparent
+      &.active
+        a
+          color: $corp_orange
+          background-color: #fff
+          font-size: 1.2em
+          &:hover
+            color: $corp_orange
+
+
+.carousel-inner
+  width: inherit
+  margin: 0 100px
+  .item
+    text-align: justify
+    line-height: 1.3em
+
+.badge
+  +border-radius(15px)
+  padding: 1px 6px 1px
+  font-weight: bold
+  color: $corp_orange
+  white-space: nowrap
+  border: 2px solid $corp_orange
+
+.dl-horizontal
+  dt
+    float: left
+    clear: left
+    padding-right: 10px
+    &.indent
+      margin-left: 20px
+  &.wide
+    dd
+      margin-left: 35px
+
+.modal
+  padding: 30px
+  form
+    margin: 0
+    .form-actions
+      margin-bottom: 0
+  .tab-content
+    background: none
+    +box-shadow(none)
+    padding: 30px 0 0 0
+
+
+.dataTables_length
+  width: auto
+  select
+    +border-radius(8px)
+    width: auto
+    display: inline
+    margin-bottom: 0
+.dataTables_filter
+  width: auto
+  input
+    +border-radius(8px)
+    display: inline
+    margin-bottom: 0
+
+.well
+  &.white
+    background-color: #fff
+  &.inactive
+    background-color: #FCF8E3
+    border-color: #FBEED5
+  &.active
+    background-color: #DFF0D8
+    border-color: #D6E9C6
+  &.warning
+    background-color: #F9EDBE
+    border-color: #F0C36D
+
+.form-actions.with_well
+  .btn
+    margin-left: 20px
+
+// Custom Classes
+
+
+
+// Html
+
+body
+  +background(linear-gradient(rgba(30,101,138,1), rgba(33,110,150,0.7)), image-url("/assets/back4.png"))
+  background-attachment: fixed
+  color: $gray
+  text-align: justify
+
+  p, h1, h2, h3, h4, h5, h6
+    color: $gray
+  
+  p
+    &.tp
+      padding-top: 2px
+    //&.help-block
+      padding-left: 20px
+
+  legend
+    color: $corp_orange
+
+  a
+    &.highlight
+      color: $corp_orange
+      font-size: 1.5em
+      font-weight: bold
+      +single-text-shadow(#fff, 4px, 4px, 12px)
+      background: url("/assets/join.png") no-repeat center left
+      padding: 0.5em 0 0.5em 80px
+  form
+    label
+      &.main
+        font-weight: bold
+        color: $corp_orange
+        margin-bottom: 20px
+    textarea
+      width: auto
+      height: 150px
+  #logo
+    background: url("/assets/logo.png") no-repeat center bottom
+    position: absolute
+    top: 5px
+    left: 50%
+    margin-left: -80px
+    width: 160px
+    height: 130px
+    color: #fff
+    font-family: "Special Elite", cursive
+    font-weight: bold
+    font-size: 30px
+    line-height: 28px
+
+  #player
+    width: 350px
+    height: 250px
+    display: block
+
+  #static_highlights
+    margin-top: 0.5em
+    text-align: right
+    a
+      &.download
+        color: $corp_blue_dark
+        font-size: 1.2em
+        margin-top: 1.5em
+        background: url("/assets/download_cloud.png") no-repeat center left
+        padding: 0.5em 0 0.5em 55px
+
+  #signin_tab
+    .error
+      margin: 0 30px 30px 30px
+
+  #root
+    #content
+      margin-bottom: 60px
+  #footer
+    +box-sizing(border-box)
+    +background(rgba(33,110,150,0.7))
+    border-top: 1px solid $corp_blue_brighter
+    .container
+      padding-top: 15px
+      color: #fff
+      a
+        color: #fff
+#contacts_table
+  width: 100% !Important

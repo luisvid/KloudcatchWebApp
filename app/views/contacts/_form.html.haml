@@ -1,0 +1,15 @@
+.tabbable
+  %ul.nav.nav-tabs
+    %li.active= link_to @contact.new_record? ? I18n.t(:new_contact) : I18n.t(:edit_contact), "#contact", :data => {:toggle => "tab"}
+  .tab-content.main
+    #contact
+      .well.white
+        = simple_form_for @contact, :html => {:class => "form-horizontal"} do |f|
+          .well
+            %fieldset
+              = f.input :name
+              = f.input :email
+              = f.input :phone
+              = f.input :message
+          .form-actions.with_well
+            = f.submit @contact.new_record? ? I18n.t(:create_contact) : I18n.t(:update), :class => "btn btn-primary", :disable_with => I18n.t(:processing)

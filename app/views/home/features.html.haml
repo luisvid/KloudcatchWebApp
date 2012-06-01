@@ -1,0 +1,57 @@
+.tabbable
+  %ul.nav.nav-tabs
+    %li.active= link_to I18n.t(:features), "#features", :data => {:toggle => "tab"}
+  .tab-content.main
+    #features.tab-pane.active
+      .tabbable.tabs-left
+        %ul.nav.nav-tabs
+          %li.active= link_to "<i class='icon-download'></i>&nbsp;#{I18n.t(:automatic_download_title)}".html_safe, "#automatic_download", :data => {:toggle => "tab"}
+          %li= link_to "<i class='icon-refresh'></i>&nbsp;#{I18n.t(:sync_title)}".html_safe, "#sync", :data => {:toggle => "tab"}
+          %li= link_to "<i class='icon-resize-full'></i>&nbsp;#{I18n.t(:complete_title)}".html_safe, "#complete", :data => {:toggle => "tab"}
+          %li= link_to "<i class='icon-lock'></i>&nbsp;#{I18n.t(:distrust_title)}".html_safe, "#distrust", :data => {:toggle => "tab"}
+          %li= link_to "<i class='icon-signal'></i>&nbsp;#{I18n.t(:mobile_devices_title)}".html_safe, "#mobile_devices", :data => {:toggle => "tab"}
+          %li= link_to "<i class='icon-user'></i>&nbsp;#{I18n.t(:target_users_title)}".html_safe, "#target_users", :data => {:toggle => "tab"}
+          %li= link_to "<i class='icon-star'></i>&nbsp;#{I18n.t(:use_cases_title)}".html_safe, "#use_cases", :data => {:toggle => "tab"}
+        .tab-content
+          #automatic_download.tab-pane.active
+            .well.white.clearfix
+              .left{:style => "margin-right: 30px;"}= image_tag "unattended.png"
+              %h3= t :automatic_download_title
+              =t :automatic_download
+          #sync.tab-pane
+            .well.white.clearfix
+              .left{:style => "margin-right: 30px;"}= image_tag "sync.png"
+              %h3= t :sync_title
+              =t :sync
+          #complete.tab-pane
+            .well.white.clearfix
+              .left{:style => "margin-right: 30px;"}= image_tag "complete.png"
+              %h3= t :complete_title
+              =t :complete
+          #distrust.tab-pane
+            .well.white.clearfix
+              .left{:style => "margin-right: 30px;"}= image_tag "distrust.png"
+              %h3= t :distrust_title
+              =t :distrust
+          #mobile_devices.tab-pane
+            .well.white.clearfix
+              .left{:style => "margin-right: 30px;"}= image_tag "mobile.png"
+              %h3= t :mobile_devices_title
+              =t :mobile_devices_html
+          #target_users.tab-pane
+            .well.white.clearfix
+              .left{:style => "margin-right: 30px;"}= image_tag "users.png" 
+              %h3= t :target_users_title
+              =t :target_users_html
+              %ul
+                %li=t :target_users1
+                %li=t :target_users2
+                %li=t :target_users3
+          #use_cases.tab-pane
+            .well.white.clearfix
+              .left{:style => "margin-right: 30px;"}= image_tag "cases.png" 
+              %h3=t :use_cases
+              %ul
+                %li=t :use_cases1
+                %li=t :use_cases2
+                %li=t :use_cases3

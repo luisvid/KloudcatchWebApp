@@ -1,0 +1,8 @@
+$(".alert").remove();
+<% if @user.valid? %>
+  $("#root").prepend("<div class='alert alert-success'><a class='close' data-dismiss='alert'>x</a><%= @flash %></div>");
+<% else %>
+  $("#root").prepend("<div class='alert alert-error'><a class='close' data-dismiss='alert'>x</a><%= @flash %></div>");
+<% end %>
+$("#edit_account").html("<%= escape_javascript(@ajax_html).html_safe %>");
+$("body").scrollTop(0)

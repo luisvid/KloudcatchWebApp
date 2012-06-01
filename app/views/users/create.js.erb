@@ -1,0 +1,5 @@
+<% if @user.valid? %>
+  window.location = "<%= account_path %>"
+<% else %>
+  $("#signup_tab").html("<%= escape_javascript(@ajax_html).html_safe %>");
+<% end %>

@@ -1,0 +1,220 @@
+es:
+  usage_title1: "Descarga:"
+  usage1:  Con un simple clic en el botón KloudCatch que aparece en la barra de herramientas de su navegador nuestro servidor inicia la descarga de sus contenidos. 
+  usage_title2: "Respaldo:"
+  usage2: Si desea puede respaldar los contenidos en su almacenamiento en linea preferido (actualmente sólo hay soporte para Dropbox).
+  usage_title3: "Sincronización:"
+  usage3: Los contenidos serán descargados desde nuestro servidor a su computador a través el cliente de sincronización KloudKatch.
+  installation1_html: "<a href=''><i class='icon-download-alt'></i>&nbsp;Instale la extensión KloudCatch para Google Chrome</a> a traves el Chrome Web Store (soporte para más navegadores pronto!)"
+  installation2_html: "<a href=''><i class='icon-download-alt'></i>&nbsp;Descargue</a> e instale el cliente de sincronización KloudCatch en su PC Windows o Mac."
+  installation3_html: "<a href=''><i class='icon-download-alt'></i>&nbsp;Instale la aplicación para iPhone</a> del App Store para poder guardar video directamente de su dispositivo móvil (soporte para iPhone, iPad y iPod Touch)."
+  signin_and_signup: Ingresar | Registrar
+  sign_up_info: Registre su cuenta de usuario GRATUITA
+  use_it: Uso
+  installation: Instalación
+  type: Tipo
+  your_password_hint_is: "Su ayuda es:"
+  email_not_found: No hay registros correspondientes!
+  password_changed: Constraseña exitosamente cambiada!
+  reset_password_instructions_sent: Acabamos de enviarle instrucciones para cambiar su contraseña a su correo electrónico!
+  reset_password: Cambiar contraseña
+  change_password: Cambiar contraseña
+  or_change_password: o cambie su contraseña si la ayuda no sirve!
+  keep_password: No cambiar contraseña
+  disable_dropbox: Desactivar Dropbox
+  contact_received: Gracias por su contacto!
+  contact_details: Detalles del contacto
+  contacts: Contactos Web
+  edit: Editar
+  delete: Borrar
+  admin: Admin
+  actions: Acciones
+  users: Usuarios
+  create: Crear
+  update: Actualizar 
+  new_contact: Contáctenos
+  edit_contact: Editar contacto
+  create_contact: Enviar contacto
+  back: Atrás
+  show: Ver
+  contact_us: Contáctenos
+  no_access: No tiene suficientes derechos para acceder a esta página!
+  important: Importante!
+  update_account_settings: Actualizar cuenta
+  access: Acceso
+  dropbox_storage: Almacenamiento Dropbox
+  personal_data: Datos personales
+  authorize: Autorizar Acceso
+  authorized: Cuenta Dropbox exitosamente habilita!
+  authorization_error: Hubo un problema al autorizar acceso!
+  add_user_storage: Agregar Almacenamiento
+  options: Opciones
+  edit_encryption: Opciones de encriptación
+  edit_account: Cuenta
+  active: Activo
+  activate: Activar
+  soon: Pronto!
+  files: Mis Archivos
+  no_files: No hay archivos!
+  statistics: Estadísticas
+  configuration: Mi Configuración
+  upgrade: Cambio de plan
+  auth_required: Tiene que ingresar a su cuenta de usuario para proceder!
+  change: Cambiar
+  processing: Procesando...
+  close: Cerrar
+  account: Mi Cuenta
+  languages: Idiomas
+  signin: Ingresar
+  signin_link: Ingrese con su cuenta de usuario
+  signed_in: "Bienvenido %{username}!"
+  signup2: Registro
+  signup: Registrar
+  create_account: Crea una nueva cuenta de usuario
+  signed_up: Cuenta de usuario exitosamente creada!
+  signout: Salir
+  signed_out: Salió exitosamente de su cuenta!
+  download_app: Descarga plugin
+  getting_started: Úselo
+  unsuccessful_auth: Autenticación inválida!
+  invalid_authentication_flash: Datos de autenticación incorrectos!
+  watch_video: Ver Video
+  details: Detalles
+  plans: Planes
+  support: Soporte
+  introduction: Introducción
+  take_tour: Tour
+  features: Características
+  home_intro: permite al usuario descargar en su computador de forma rápida y segura informaciónd e la web que le es relevante y teme pueda ser modificada o eliminada!
+  main_advantages_title_html: "Las <span class='label'>principales ventajas</span> de <strong><em>KloudCatch</em></strong> son:"
+  main_advantages1: Almacena evidencia de contenido Web.
+  main_advantages2: Evita la desconfianza de que la información almacenada en un servicio de almacenamiento en la nube pueda ser accedido o eliminado.
+  main_advantages3: Libera al usuario de controlar el proceso de descarga y le permite continuar con otras tareas.
+  main_advantages4: Permite realizar descargas desde dispositivos móviles.
+  how_title: Cómo funciona?
+  how_it_works1_html: El usuario inicia la descarga con tan solo un clic en el botón instalado en su navegador.
+  how_it_works2: La extensión envia a KloudCatch la dirección del contenido que desea descargar.
+  how_it_works3: A partir de este momento la descarga queda a cargo de nuestros servidores, liberando al usuario de controlar el proceso.
+  how_it_works4: Una vez finalizada la descarga, los archivos son sincronizados en el equipo del usuario y opcionalmente guardados en un proveedor de almacenamiento en la nube.
+  what_title: Que es?
+  what_text: es un servicio que permite la descarga de contenidos web de forma automática y desatendida y su posterior sincronización en la computadora del usuario.
+  question1: Alguna vez le pasó que información importante que marcó para ver luego cómo notas periodísticas, videos o posts sufrieron modificaciones en su contenido o incluso ya no estaban disponibles cuando los necesitaba debido a caídas del sistema, censura o presión política?
+  question2: Alguna vez sintió desconfianza que la información guardada en un almacenamiento en la nube pueda ser accedida o eliminada por el proveedor del servicio?
+  solution_html: "te entrega la <span class='label'>solución</span>:"
+  what_is_it_advantages1: Permite al usuario continuar con otras tareas, cerrar el navegador o incluso apagar su computar liberándolo de controlar el proceso de descarga. Es especialmente útil cuando se está de viaje o utilizando dispositivos móviles.
+  what_is_it_advantages2: Permite al usuario poseer la información completa, a diferencia de los servicios de web clipping qeu sólo almacenan la URL o partes de la información. 
+  what_is_it_advantages3: Evita la desconfianza de que la información guardada en un servicio de almacenamiento en la nube pueda ser accedido o eliminado.
+  mobile_devices_title: Dispositivos móviles
+  mobile_devices_html: "<p><strong><em>KloudCatch</em></strong> permite iniciar descargas desde dispositivos que de otra forma no serían posibles debido a recursos limitados de dichos dispositivos.</p><p>Adicionalmente, el servicio permite guardar en nuestros servidores videos de dispositivos móviles en el mismo momento en que se están grabando.</p>"
+  automatic_download_title: Descarga automática
+  automatic_download: Sólo es necesario hacer clic en un botón y la descarga comienza automáticamente sin necesidad de intervención por parte del usuario.
+  sync_title: Sincronización
+  sync: Una vez finalizada la descarga los archivos son sincronizados a través de un programa cliente instalado en la computadora del usuario.
+  complete_title: Guardar información completa
+  complete: Permite al usuario guardar la información completa a diferencia de los servicios de web clipping que sólo almacenan la URL o partes de la información.
+  distrust_title: Evitar la desconfianza
+  distrust: Evita la desconfianza de que la información guardada en un servicio de almacenamiento en la nube pueda ser accedida o eliminada.
+  target_users_title: Usuarios
+  target_users_html: "Queremos presentar a <strong><em>KloudCatch</em></strong> como una herramienta tanto para individuos como para profesionales:"
+  target_users1: Personas que deseen guardar y hacer back-up de contenidos encontrados en la Web de forma fácil y automática.
+  target_users2: Personas que realicen trabajos de investigación de forma personal o profesional, cómo por ejemplo periodistas.
+  target_users3: Grupos de trabajo o empresas que necesiten compartir entre si la investigación realizada por sus miembros, cómo por ejemplo periódicos o cadenas de noticias.
+  use_cases_title: Ejemplos
+  use_cases: "Ejemplos de uso:"
+  use_cases1: Para buscar y almacenar información para proyectos académicos, periodísticos o comparación de productos.
+  use_cases2: Para guardar evidencia de contenidos Web o transacciones.
+  use_cases3: Para almacenar copias de contenidos Web para leer o ver luego off-line.
+  activate_dropbox_html: "Por favor autorize el acceso a su cuenta Dropbox para que podamos guardar sus archivos sin limitaciones y soporte backup.<br />Si aún no tiene una cuenta Dropbox considere crear una de forma gratuita en <a target='_blank' href='http://www.dropbox.com/register'>Cuenta Dropbox</a>."
+  tooltips:
+    show_message: Ver mensaje completo
+    delete_contact: Borrar contacto
+    edit_user: Editar usuario
+    delete_user: Borrar usuario
+    add_admin_role: Agregar derechos de administrador
+    remove_admin_role: Quitar derechos de administrador
+    reset_password: Crear una contraseña nueva.
+    forgot_password: Se mostrará la ayuda que definó para recordar su contraseña.
+    statuses:
+      pending: Aún no se ha descargado.
+      downloading: Se está descargando.
+      downloaded: Descargado y en espera a sincronizarse con el cliente.
+      synched: Acaba de sincronizarse con el cliente.
+      removed: Se borró del almacenamiento local.
+  hints:
+    delete_storage_files: Marque esta opción si desea que se borren los archivos sincronizados con el cliente.
+    contact_details: Email, teléfono...
+    password: Deje una ayuda que le permite recordar su contraseña.
+  confirms:
+    disable_dropbox: Para poder usar este servicio se requiere una cuenta activa de Dropbox o contratar un plan de almacenamiento en KloudCatch! Seguro que desea desactivar Dropbox?
+    delete_record: Seguro que desea borrar este registro y todos sus datos relacionados?
+    toggle_admin: "Seguro que desea cambiar los derechos de este usuario?"
+  placeholders:
+    password: Nombre mascota, hijo, etc.
+  alerts:
+    email_empty: Debe especificar su email!
+
+  time:
+    formats:
+      short: "%d/%m/%Y"
+      long: "%d/%m/%Y - %H:%M"
+
+  user_mailer:
+    signup_confirmation:
+      subject: "Bienvenidos a KloudCatch"
+      hello: "Estimada/o %{name}"
+      message: "gracias por registrar tu cuenta de usuario en KloudCatch, la herramienbta que habilita la descarga automática de contenidos web y que sincroniza estos contenidos con su computador de manera segura.\n\nActualmente estamos probando nuestro servicio en modo beta limitado a las funcionalidades básicas pero de uso GRATUITO!\n\nEmpieze a usarlo:\n- Instale la extensión KloudCatch para Google Chrome a traves el Chrome Web Store (soporte para más navegadores pronto!).\n-Descargue e instale el cliente de sincronización KloudCatch en su PC Windows o Mac.\n\nGet the iPhone application from the App Store to save video directly from your mobile device (iPhone, iPad and iPad Touch supported).\n\nInstale la aplicación para iPhone del App Store para poder guardar video directamente de su dispositivo móvil (soporte para iPhone, iPad y iPod Touch).\n\nPS: Siga a KloudCatch en Twitter y mantengase informado de noticias sobre actualizaciones y nuevas funcionalidades.\n\nMuchas gracias!"
+      footer: Your KloudCatch Support
+    reset_password_email:
+      subject: "KloudCatch: Recrear Constraseña"
+      hello: "Estimada/o %{name},"
+      message: "Usted solicitó el cambio de su contraseña. Para cambiarla debe acceder aqui:"
+      footer: Su soporte KloudCatch
+    inactive_dropbox_email:
+      subject: "KloudCatch: Cuenta Dropbox inactiva"
+      hello: "Estimada/o %{name},"
+      message: "por favor active su cuenta Dropbox a través el panel de administración personal en KloudCatch:"
+      footer: Your KloudCatch Support
+    dropbox_quota_warning:
+      subject: "KloudCatch: Cuenta Dropbox casi llena"
+      hello: "Estimada/o %{name},"
+      message: "su cuenta de Dropbox tiene menos de 100 MB de espacio libre! Por favor libere espacio accediendo a su cuenta Dropbox para seguir usando nuestro sevicio sin inconvenientes."
+      footer: Your KloudCatch Support
+
+  activerecord:
+    created_at: Fecha Creación
+    successfully_updated: Exitosamente actualizado!
+    statuses:
+      pending: Pendiente
+      downloading: Descargando
+      downloaded: Descargado
+      synched: Sincronizado
+      removed: Borrado
+    errors:
+      validation_errors: Por favor corriga los errores detallados más abajo...
+      messages:
+        blank: Debe especificarse!
+        invalid: Tiene un formato inválido!
+        taken: Ya existe!
+    attributes:
+      user:
+        username: Nombre Usuario
+        password: Contraseña
+        password_hint: Ayuda contraseña
+        password_confirmation: Repite Contraseña
+        remember: Recordar Sesión
+        delete_files: Borrar archivos
+        email: Email
+      droplet:
+        url: URL
+        file: Archivo
+        name: Nombre
+        storage: Almacenamiento
+        status: Estatus Interno
+      contact:
+        name: Nombre
+        email: Email
+        phone: Teléfono
+        message: Mensaje
+      account:
+        description: Description
+

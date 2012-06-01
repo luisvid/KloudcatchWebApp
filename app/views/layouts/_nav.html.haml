@@ -1,0 +1,22 @@
+.navbar
+  .navbar-inner
+    .container
+      %a.btn.btn-navbar{:data => {:toggle => "collapse", :target => ".nav-collapse"}}
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      .brand= link_to "KLOUD CATCH", root_path
+      .nav-collapse
+        %ul.nav.main
+          %li{:class => active_main_menu("home", "index")}= link_to "Home", root_path
+          %li{:class => active_main_menu("home", "features")}= link_to I18n.t(:features), features_path
+          %li{:class => active_main_menu("home", "getting_started")}= link_to I18n.t(:getting_started), getting_started_path
+        %ul.nav.pull-right
+          - unless current_user
+            %li{:class => active_main_menu("sessions")}= link_to "<i class='icon-user icon-white'></i>#{I18n.t(:signin_and_signup)}".html_safe, signin_path, :class => "signin", :data => {:target => "#signin_form", :toggle => "modal"}
+          - else
+            %li{:class => "dropdown #{active_main_menu("users")}"}
+              %a{:href => "#", :class => "dropdown-toggle", :data => {:toggle => "dropdown"}}= "#{current_user.name} <b class='caret'></b>".html_safe
+              %ul.dropdown-menu
+                %li= link_to "<i class='icon-user'></i> #{I18n.t(:account)}".html_safe, account_path
+                %li= link_to "<i class='icon-remove'></i> #{ I18n.t(:signout)}".html_safe, signout_path

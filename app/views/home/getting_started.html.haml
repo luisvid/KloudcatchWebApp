@@ -1,0 +1,49 @@
+.tabbable
+  %ul.nav.nav-tabs
+    %li.active= link_to I18n.t(:getting_started), "#getting_started", :data => {:toggle => "tab"}
+  .tab-content.main
+    #getting_started.tab-pane.active
+      .tabbable.tabs-left
+        %ul.nav.nav-tabs
+          %li.active= link_to "<i class='icon-user'></i>&nbsp;#{I18n.t(:signup2)}".html_safe, "#signup", :data => {:toggle => "tab"}
+          %li= link_to "<i class='icon-download-alt'></i>&nbsp;#{I18n.t(:installation)}".html_safe, "#installation", :data => {:toggle => "tab"}
+          %li= link_to "<i class='icon-refresh'></i>&nbsp;#{I18n.t(:use_it)}".html_safe, "#use", :data => {:toggle => "tab"}
+        .tab-content
+          #signup.tab-pane.active
+            .well.white
+              = link_to "<i class='icon-user'></i>&nbsp;#{I18n.t(:sign_up_info)}".html_safe, signup_path, :class => "btn btn-success"
+          #installation.tab-pane
+            .well.white
+              .well
+                %dl.dl-horizontal.wide
+                  %dt
+                    %span.badge.badge-warning 1
+                  %dd
+                    =t :installation1_html
+              .well
+                %dl.dl-horizontal.wide
+                  %dt
+                    %span.badge.badge-warning 2
+                  %dd
+                    =t :installation2_html
+              .well
+                %dl.dl-horizontal.wide
+                  %dt
+                    %span.badge.badge-warning 3
+                  %dd
+                    =t :installation3_html
+          #use.tab-pane
+            .well.white
+              .well
+                .left{:style => "margin-right: 30px;"}= image_tag "mobile_small.png"
+                %h3= t :usage_title1
+                =t :usage1
+              .well
+                .left{:style => "margin-right: 30px;"}= image_tag "distrust_small.png"
+                %h3= t :usage_title2
+                =t :usage2
+              .well
+                .left{:style => "margin-right: 30px;"}= image_tag "sync_small.png"
+                %h3= t :usage_title3
+                =t :usage3
+

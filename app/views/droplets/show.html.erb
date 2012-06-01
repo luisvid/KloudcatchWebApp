@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Url:</b>
+  <%= @droplet.url %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @droplet.status %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @droplet.user %>
+</p>
+
+
+<%= link_to 'Edit', edit_droplet_path(@droplet) %> |
+<%= link_to 'Back', droplets_path %>

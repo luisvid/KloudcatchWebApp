@@ -1,0 +1,9 @@
+development:
+  access_key_id: 'AKIAI6AGUT6MFOTTQESQ'
+  secret_access_key: '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'
+production:
+  access_key_id: 'AKIAI6AGUT6MFOTTQESQ'
+  secret_access_key: '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'
+test:
+  access_key_id: 'AKIAI6AGUT6MFOTTQESQ'
+  secret_access_key: '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'

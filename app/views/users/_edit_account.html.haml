@@ -1,0 +1,17 @@
+= simple_form_for @user, :remote => true, :html => {:class => "form-horizontal"} do |f|
+  .well
+    %label.main= I18n.t(:personal_data)
+    %fieldset
+      = f.input :username
+      = f.input :email
+      .controls
+        %a#change_password{:href => "#", :class => @user.errors.messages.has_key?(:password_hint) ? "hidden" : nil}= "<i class='icon-refresh'></i> #{I18n.t(:change_password)}".html_safe
+      #password_fields{:class => @user.errors.messages.has_key?(:password_hint) ? nil : "hidden"}
+        = f.input :password, :as => :string, :disabled => !@user.errors.messages.has_key?(:password_hint), :input_html => {:class => "password_field"}
+        = f.input :password_hint, :as => :string, :disabled => !@user.errors.messages.has_key?(:password_hint), :placeholder => I18n.t(:password, :scope => [:placeholders]), :input_html => {:class => "password_field"}
+  .well
+    %label.main= I18n.t(:storage, :scope => [:activerecord, :attributes, :droplet])
+    = f.input :account_id, :collection => Account.all, :label_method => :description, :value_method => :id, :prompt => nil, :label => I18n.t(:type)
+    #dropbox= render :partial => "dropbox"
+  .form-actions.with_well
+    %button.btn.btn-primary{:type => "submit", :data => {:toggle => "button"}}= "<i class='icon-refresh icon-white'></i> #{I18n.t(:update_account_settings)}".html_safe

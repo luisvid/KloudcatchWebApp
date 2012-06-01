@@ -1,0 +1,8 @@
+= simple_form_for @user, :remote => true, :html => {:class => "form-horizontal"} do |f|
+  %fieldset
+    = f.input :username
+    = f.input :email
+    = f.input :password
+    = f.input :password_hint, :as => :string, :placeholder => I18n.t(:password, :scope => [:placeholders])
+    .form-actions
+      = f.submit I18n.t(:signup), :class => "btn btn-primary", :disable_with => I18n.t(:processing)

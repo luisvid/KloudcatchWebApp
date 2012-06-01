@@ -1,0 +1,7 @@
+= simple_form_for "sessions", :url => "/#{I18n.locale}/sessions", :remote => true, :html => {:class => "form-horizontal"} do |f|
+  %fieldset
+    = f.input :email
+    = f.input :password, :hint => "<a rel='tooltip' title='#{I18n.t(:forgot_password, :scope => [:tooltips])}' id='forgot_password' href='#' data-url='#{password_hint_users_path}' data-alert='#{I18n.t(:email_empty, :scope => [:alerts])}'><i class='icon-ok-sign'></i> #{I18n.t(:password_hint, :scope => [:activerecord, :attributes, :user])}</a> | <a rel='tooltip' title='#{I18n.t(:reset_password, :scope => [:tooltips])}' id='reset_password' href='#' data-url='#{password_resets_path}' data-alert='#{I18n.t(:email_empty, :scope => [:alerts])}'><i class='icon-refresh'></i> #{I18n.t(:reset_password)}</a>".html_safe
+    = f.input :remember, :as => :boolean
+    .form-actions
+      = f.submit I18n.t(:signin), :class => "btn btn-primary", :disable_with => I18n.t(:processing)

@@ -1,0 +1,51 @@
+.tabbable
+  %ul.nav.nav-tabs
+    %li.active= link_to I18n.t(:configuration), "#configuration", :data => {:toggle => "tab"}
+    %li= link_to I18n.t(:files), "#files_tab", :data => {:toggle => "tab"}
+    - if @admin
+      %li= link_to I18n.t(:users), "#users_tab", :data => {:toggle => "tab"}
+      %li= link_to I18n.t(:contacts), "#contacts_tab", :data => {:toggle => "tab"}
+  .tab-content.main
+    #configuration.tab-pane.active
+      .tabbable.tabs-left
+        %ul.nav.nav-tabs
+          %li.active= link_to "<i class='icon-user'></i> #{t :edit_account}".html_safe, "#edit_account", :data => {:toggle => "tab"}
+          %li= link_to "<i class='icon-lock'></i> #{t :edit_encryption}".html_safe, "#edit_encryption", :data => {:toggle => "tab"}
+        .tab-content
+          #edit_account.tab-pane.active
+            .well.white= render :partial => "edit_account"
+          #edit_encryption.tab-pane
+            .well.white
+              %span.label.label-info= t :soon
+    #files_tab.tab-pane
+      .well.white
+        %table#droplets_table.display{:data => {:source => html_index_droplets_path(format: "json")}}
+          %thead
+            %tr
+              %th= t :url, :scope => [:activerecord, :attributes, :droplet]
+              %th= t :name, :scope => [:activerecord, :attributes, :droplet]
+              %th= t :storage, :scope => [:activerecord, :attributes, :droplet]
+              %th= t :status, :scope => [:activerecord, :attributes, :droplet]
+          %tbody
+    - if @admin
+      #users_tab.tab-pane
+        .well.white
+          %table#users_table.display{:data => {:source => users_url(format: "json")}}
+            %thead
+              %th= t :username, :scope => [:activerecord, :attributes, :user]
+              %th= t :email, :scope => [:activerecord, :attributes, :user]
+              %th= t :created_at, :scope => [:activerecord]
+              %th= t :actions
+            %tbody
+      #contacts_tab.tab-pane
+        .well.white
+          %table#contacts_table.display{:data => {:source => contacts_url(format: "json")}}
+            %thead
+              %th= t :created_at, :scope => [:activerecord]
+              %th= t :name, :scope => [:activerecord, :attributes, :contact]
+              %th= t :email, :scope => [:activerecord, :attributes, :contact]
+              %th= t :phone, :scope => [:activerecord, :attributes, :contact]
+              %th= t :message, :scope => [:activerecord, :attributes, :contact]
+              %th= t :message, :scope => [:activerecord, :attributes, :contact]
+              %th= t :actions
+            %tbody

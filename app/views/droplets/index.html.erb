@@ -1,0 +1,27 @@
+<h1>Listing droplets</h1>
+
+<table>
+  <tr>
+    <th>Url</th>
+    <th>Status</th>
+    <th>User</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @droplets.each do |droplet| %>
+  <tr>
+    <td><%= droplet.url %></td>
+    <td><%= droplet.status %></td>
+    <td><%= droplet.user %></td>
+    <td><%= link_to 'Show', droplet %></td>
+    <td><%= link_to 'Edit', edit_droplet_path(droplet) %></td>
+    <td><%= link_to 'Destroy', droplet, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Droplet', new_droplet_path %>

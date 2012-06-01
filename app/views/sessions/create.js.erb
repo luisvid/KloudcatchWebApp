@@ -1,0 +1,7 @@
+<% if @user %>
+  window.location = "<%= account_path %>"
+<% else %>
+  if ($("#signin_tab .error").length < 1) {
+    $("#signin_tab").prepend("<div class='alert alert-error'><a class='close' data-dismiss='alert'>x</a><%= I18n.t(:unsuccessful_auth)%></div>");
+  }
+<% end %>

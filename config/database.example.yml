@@ -1,0 +1,28 @@
+#Postgresql
+
+development:
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  database: kloudcatch_development
+  pool: 5
+  username: postgres
+  password: jawosis
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  database: kloudcatch_test
+  pool: 5
+  username: postgres
+  password: jawosis
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  database: kloudcatch_production
+  pool: 5
+  username: postgres
+  password: jawosis
