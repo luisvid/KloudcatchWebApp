@@ -6,8 +6,8 @@ development:
   host: localhost
   database: kloudcatch_development
   pool: 5
-  username: postgres
-  password: jawosis
+  username: my_user
+  password: my_password
 
 test:
   adapter: postgresql
@@ -15,8 +15,8 @@ test:
   host: localhost
   database: kloudcatch_test
   pool: 5
-  username: postgres
-  password: jawosis
+  username: my_user
+  password: my_password
 
 production:
   adapter: postgresql
@@ -24,5 +24,5 @@ production:
   host: localhost
   database: kloudcatch_production
   pool: 5
-  username: postgres
-  password: jawosis
+  username: my_user
+  password: my_password

@@ -22,8 +22,10 @@ gem "pg"
 gem 'jquery-rails'
 gem "clockwork"
 
-gem "execjs"
-gem "therubyracer"
+group :development do
+  gem "execjs"
+  gem "therubyracer"
+end
 
 # Gems used only for assets and not required
 # in production environments by default.
