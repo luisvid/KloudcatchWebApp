@@ -14,7 +14,7 @@ class DropletsController < ApplicationController
       user = login(params[:email], params[:password], true)
     end
     if user
-      @droplets = Droplet.all
+      @droplets = Droplet.where(:user_id => user.id)
       respond_to do |format|
         format.html
         format.json { render json: @droplets }
