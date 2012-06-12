@@ -1,5 +1,5 @@
 class DropletsController < ApplicationController
-  skip_before_filter :require_login, :only => [:upload, :create, :index, :update, :destroy, :show, :basic_auth_login] #pending?
+  skip_before_filter :require_login, :only => [:upload, :create, :index, :update, :destroy, :show, :basic_auth_login, :confirm, :sync, :pending]
   skip_before_filter :verify_authenticity_token
   before_filter :require_login_from_http_basic, :only => [:basic_auth_login]
 
@@ -138,32 +138,64 @@ class DropletsController < ApplicationController
   end
   
   def pending
-    downloaded_id = Status.find_by_name("downloaded").id
-    synched_id = Status.find_by_name("synched").id
-    droplets = Droplet.select([:id, :name]).where(:status_id => [downloaded_id, synched_id], :user_id => current_user.id).all
-    render :json => {:droplets => droplets}.to_json
+    if current_user
+      user = current_user
+    else
+      user = login(params[:email], params[:password], true)
+    end
+    if user
+      downloaded_id = Status.find_by_name("downloaded").id
+      synched_id = Status.find_by_name("synched").id
+      droplets = Droplet.select([:id, :name]).where(:status_id => [downloaded_id, synched_id], :user_id => user.id).all
+      render :json => {:droplets => droplets}.to_json
+    else
+      flash[:warning] = I18n.t(:auth_required)
+      redirect_to signin_path
+    end
   rescue
     render :text => "error"
   end
   
   def synch
-    downloaded_id = Status.find_by_name("downloaded").id
-    synched_id = Status.find_by_name("synched").id
-    droplet = Droplet.where(:id => params[:id], :user_id => current_user.id, :status_id => [downloaded_id, synched_id]).first
-    raise if droplet.nil?
-    droplet.synch
-    send_file droplet.file, :x_sendfile=>true
+    if current_user
+      user = current_user
+    else
+      user = login(params[:email], params[:password], true)
+    end
+    if user
+      downloaded_id = Status.find_by_name("downloaded").id
+      synched_id = Status.find_by_name("synched").id
+      droplet = Droplet.where(:id => params[:id], :user_id => user.id, :status_id => [downloaded_id, synched_id]).first
+      raise if droplet.nil?
+      droplet.synch
+      send_file droplet.file, :x_sendfile=>true
+    else
+      flash[:warning] = I18n.t(:auth_required)
+      redirect_to signin_path
+    end
     rescue
       render :text => "error"
   end
   
   def confirm
-      droplet = Droplet.where(:id => params[:id], :user_id => current_user.id, :status_id => Status.find_by_name("synched").id).first
+    if current_user
+      user = current_user
+    else
+      user = login(params[:email], params[:password], true)
+    end
+    if user
+      droplet = Droplet.where(:id => params[:id], :user_id => user.id, :status_id => Status.find_by_name("synched").id).first
       raise if droplet.nil?
       droplet.confirm
       droplet.file = ""
       droplet.update_status("removed")
       render :text => "ok"
+    else
+      flash[:warning] = I18n.t(:auth_required)
+      redirect_to signin_path
+    end
+  rescue
+    render :text => "error"
   end
 
   def upload
