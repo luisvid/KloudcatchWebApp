@@ -22,6 +22,7 @@ KloudcatchNew::Application.routes.draw do
   #kloudcatch server routes
   resources :droplets do
     get "html_index", :on => :collection
+    get "basic_auth_login", :on => :collection
   end
   get '/synch/:id' => 'droplets#synch'
   get '/confirm/:id' => 'droplets#confirm'

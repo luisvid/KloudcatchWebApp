@@ -1,6 +1,11 @@
 class DropletsController < ApplicationController
-  skip_before_filter :require_login, :only => [:upload, :create]
+  skip_before_filter :require_login, :only => [:upload, :create, :update, :destroy, :show, :basic_auth_login] #pending?
   skip_before_filter :verify_authenticity_token
+  before_filter :require_login_from_http_basic, :only => [:basic_auth_login]
+
+  def basic_auth_login
+    render :text => "Login from basic auth successful!"
+  end
 
   def index
     @droplets = Droplet.all
@@ -19,11 +24,20 @@ class DropletsController < ApplicationController
   end
 
   def show
-    @droplet = Droplet.find(params[:id])
-
-    respond_to do |format|
-      format.html
-      format.json { render json: @droplet }
+    if current_user
+      user = current_user
+    else
+      user = login(params[:email], params[:password], true)
+    end
+    if user
+      @droplet = Droplet.find(params[:id])
+      respond_to do |format|
+        format.html
+        format.json { render json: @droplet }
+      end
+    else
+      flash[:warning] = I18n.t(:auth_required)
+      redirect_to signin_path
     end
   end
 
@@ -68,29 +82,49 @@ class DropletsController < ApplicationController
   end
 
   def update
-    @droplet = Droplet.find(params[:id])
-    @droplet.user ||= current_user
+    if current_user
+      user = current_user
+    else
+      user = login(params[:email], params[:password], true)
+    end
+    if user
+      @droplet = Droplet.find(params[:id])
+      @droplet.user ||= user
 
-    respond_to do |format|
-      if @droplet.update_attributes(params[:droplet])
-        format.html { redirect_to @droplet, notice: 'Droplet was successfully updated.' }
-        format.json { head :ok }
-      else
-        format.html { render action: "edit" }
-        format.json { render json: @droplet.errors, status: :unprocessable_entity }
+      respond_to do |format|
+        if @droplet.update_attributes(params[:droplet])
+          format.html { redirect_to @droplet, notice: 'Droplet was successfully updated.' }
+          format.json { head :ok }
+        else
+          format.html { render action: "edit" }
+          format.json { render json: @droplet.errors, status: :unprocessable_entity }
+        end
       end
+    else
+      flash[:warning] = I18n.t(:auth_required)
+      redirect_to signin_path
     end
   end
 
   def destroy
-    @droplet = Droplet.find(params[:id])
-    @droplet.user = @current_user
-    @droplet.status = Status.find_by_name("removed")
-    @droplet.save
+    if current_user
+      user = current_user
+    else
+      user = login(params[:email], params[:password], true)
+    end
+    if user
+      @droplet = Droplet.find(params[:id])
+      @droplet.user = @current_user
+      @droplet.status = Status.find_by_name("removed")
+      @droplet.save
 
-    respond_to do |format|
-      format.html { redirect_to droplets_url }
-      format.json { head :ok }
+      respond_to do |format|
+        format.html { redirect_to droplets_url }
+        format.json { head :ok }
+      end
+    else
+      flash[:warning] = I18n.t(:auth_required)
+      redirect_to signin_path
     end
   end
   
@@ -110,23 +144,25 @@ class DropletsController < ApplicationController
     raise if droplet.nil?
     droplet.synch
     send_file droplet.file, :x_sendfile=>true
-  rescue
-    render :text => "error"
+    rescue
+      render :text => "error"
   end
   
   def confirm
-    droplet = Droplet.where(:id => params[:id], :user_id => current_user.id, :status_id => Status.find_by_name("synched").id).first
-    raise if droplet.nil?
-    droplet.confirm
-    droplet.file = ""
-    droplet.update_status("removed")
-    render :text => "ok"
-  rescue
-    render :text => "error"
+      droplet = Droplet.where(:id => params[:id], :user_id => current_user.id, :status_id => Status.find_by_name("synched").id).first
+      raise if droplet.nil?
+      droplet.confirm
+      droplet.file = ""
+      droplet.update_status("removed")
+      render :text => "ok"
   end
 
   def upload
-    user = login(params[:email], params[:password], true)
+    if current_user
+      user = current_user
+    else
+      user = login(params[:email], params[:password], true)
+    end
     if user
       @droplet = Droplet.new()
       @droplet.user = current_user
