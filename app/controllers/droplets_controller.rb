@@ -1,5 +1,5 @@
 class DropletsController < ApplicationController
-  skip_before_filter :require_login, :only => [:upload, :create, :update, :destroy, :show, :basic_auth_login] #pending?
+  skip_before_filter :require_login, :only => [:upload, :create, :index, :update, :destroy, :show, :basic_auth_login] #pending?
   skip_before_filter :verify_authenticity_token
   before_filter :require_login_from_http_basic, :only => [:basic_auth_login]
 
@@ -8,11 +8,20 @@ class DropletsController < ApplicationController
   end
 
   def index
-    @droplets = Droplet.all
-
-    respond_to do |format|
-      format.html
-      format.json { render json: @droplets }
+    if current_user
+      user = current_user
+    else
+      user = login(params[:email], params[:password], true)
+    end
+    if user
+      @droplets = Droplet.all
+      respond_to do |format|
+        format.html
+        format.json { render json: @droplets }
+      end
+    else
+      flash[:warning] = I18n.t(:auth_required)
+      redirect_to signin_path
     end
   end
 
