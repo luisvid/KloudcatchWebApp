@@ -1,5 +1,5 @@
 class DropletsController < ApplicationController
-  skip_before_filter :require_login, :only => [:upload, :create, :index, :update, :destroy, :show, :basic_auth_login, :confirm, :sync, :pending]
+  skip_before_filter :require_login, :only => [:upload, :create, :index, :update, :destroy, :show, :basic_auth_login, :confirm, :synch, :pending]
   skip_before_filter :verify_authenticity_token
   before_filter :require_login_from_http_basic, :only => [:basic_auth_login]
 
@@ -194,8 +194,8 @@ class DropletsController < ApplicationController
       flash[:warning] = I18n.t(:auth_required)
       redirect_to signin_path
     end
-  rescue
-    render :text => "error"
+    rescue
+      render :text => "error"
   end
 
   def upload

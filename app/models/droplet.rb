@@ -70,6 +70,7 @@ class Droplet < ActiveRecord::Base
         begin
           temp_file, metadata = client.get_file_and_metadata(file_path)
         rescue Exception => e
+          CustomHelper.debug(e.inspect)
           if e.message.scan("not found").size > 0
             CustomHelper.debug("file not found in Dropbox")
           end
