@@ -22,6 +22,7 @@
         %table#droplets_table.display{:data => {:source => html_index_droplets_path(format: "json")}}
           %thead
             %tr
+              %th= t :file_added_on
               %th= t :url, :scope => [:activerecord, :attributes, :droplet]
               %th= t :name, :scope => [:activerecord, :attributes, :droplet]
               %th= t :storage, :scope => [:activerecord, :attributes, :droplet]

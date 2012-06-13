@@ -20,6 +20,7 @@ class DropletsDatatable
   def data
     droplets.map do |droplet|
       [
+        "<span title='#{I18n.t(:file_added_on)}: #{l droplet.created_at, :format => :long}'>#{h(l droplet.created_at, :format => :long)}</span>",
         "<span title='#{droplet.url}'>#{h(truncate(droplet.url, :length => 30))}</span>",
         "<span title='#{droplet.name}'>#{h(truncate(droplet.name, :length => 30, :omission => "...(#{droplet.name.present? ? File.extname(droplet.name) : ""})"))}</span>",
         h(droplet.storage),
@@ -50,7 +51,7 @@ class DropletsDatatable
   end
 
   def sort_column
-    columns = %w[url name storage status_id]
+    columns = %w[created_at url name storage status_id]
     columns[params[:iSortCol_0].to_i]
   end
 
