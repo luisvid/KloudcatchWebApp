@@ -1,10 +1,10 @@
 en:
   file_added_on: File added on
-  usage_title1: "Download:"
+  usage_title1: "Download"
   usage1: Just click in the KloudCatch button in your browser toolbar an our server will start downloading your content.
-  usage_title2: "Backup:"
+  usage_title2: "Backup"
   usage2: If you wish, the files will be backed up in your preferred online storage (currently only Dropbox supported).
-  usage_title3: "Synchronization:"
+  usage_title3: "Synchronization"
   usage3: The files will be downloaded to your computer through the KloudCatch client app.
   installation1_html: "<a href=''><i class='icon-download-alt'></i>&nbsp;Install the KloudCatch extension for Google Chrome</a> via the Chrome Web Store (support for more browsers soon)."
   installation2_html: "<a href=''><i class='icon-download-alt'></i>&nbsp;Download</a> and install the KloudCatch Synchronization Client in your Windows PC or Mac."

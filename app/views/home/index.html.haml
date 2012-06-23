@@ -10,41 +10,32 @@
           %li= link_to I18n.t(:how_title), "#how", :data => {:toggle => "tab"}
         .tab-content
           #what_is_it.tab-pane.active
-            .well.white
+            %strong
+              %em KloudCatch
+            %p=t :what_text
+            .well
+              %dl.dl-horizontal
+                %dt.indent
+                  %i.icon-question-sign{:stlye => "font-size: 1.2em;"}
+                %dd= t :question1
+            .well
+              %dl.dl-horizontal
+                %dt.indent
+                  %i.icon-question-sign{:stlye => "font-size: 1.2em;"}
+                %dd= t :question2
+            .clearfix
+              .image.right= image_tag "home.png"
               %strong
                 %em KloudCatch
-              %p=t :what_text
-              .well
-                %dl.dl-horizontal
-                  %dt.indent
-                    %i.icon-question-sign{:stlye => "font-size: 1.2em;"}
-                  %dd= t :question1
-              .well
-                %dl.dl-horizontal
-                  %dt.indent
-                    %i.icon-question-sign{:stlye => "font-size: 1.2em;"}
-                  %dd= t :question2
-              .clearfix
-                .image.right= image_tag "home.png"
-                %strong
-                  %em KloudCatch
-                = t :solution_html
-                %p
-                  %dl.dl-horizontal
-                    %dt.indent
-                      %i.icon-chevron-right
-                    %dd=t :main_advantages1
-                    %dt.indent
-                      %i.icon-chevron-right
-                    %dd=t :main_advantages2
-                    %dt.indent
-                      %i.icon-chevron-right
-                    %dd=t :main_advantages3
-                    %dt.indent
-                      %i.icon-chevron-right
-                    %dd=t :main_advantages4
+              = t :solution_html
+              %p
+                %ul.icons
+                  %li.icon-chevron-right=t :main_advantages1
+                  %li.icon-chevron-right=t :main_advantages2
+                  %li.icon-chevron-right=t :main_advantages3
+                  %li.icon-chevron-right=t :main_advantages4
           #how.tab-pane
-            .well.white.clearfix
+            .clearfix
               .image.right= image_tag "howitworks.png"
               %dl.dl-horizontal.wide
                 %dt

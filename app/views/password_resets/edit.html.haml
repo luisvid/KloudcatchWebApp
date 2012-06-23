@@ -1,10 +1,11 @@
-= simple_form_for @user, :url => password_reset_path(@user), :html => {:method => :put, :class => "form-horizontal"} do |f|
-  .well
-    %legend= t :reset_password
-    %fieldset
-      = f.input :email, :disabled => true
-      = f.input :password
-      = f.input :password_hint, :as => :string, :placeholder => I18n.t(:password, :scope => [:placeholders])
-      = hidden_field_tag :token, @token
-  .form-actions.with_well
-    = f.submit I18n.t(:change_password), :class => "btn btn-primary", :disable_with => I18n.t(:processing)
+.well.white
+  = simple_form_for @user, :url => password_reset_path(@user), :html => {:method => :put, :class => "form-horizontal"} do |f|
+    .well
+      %legend= t :reset_password
+      %fieldset
+        = f.input :email, :disabled => true
+        = f.input :password
+        = f.input :password_hint, :as => :string, :placeholder => I18n.t(:password, :scope => [:placeholders])
+        = hidden_field_tag :token, @token
+    .form-actions.with_well
+      = f.submit I18n.t(:change_password), :class => "btn btn-primary", :disable_with => I18n.t(:processing)

@@ -1,10 +1,10 @@
 es:
   file_added_on: Archivo creado el
-  usage_title1: "Descarga:"
+  usage_title1: "Descarga"
   usage1:  Con un simple clic en el botón KloudCatch que aparece en la barra de herramientas de su navegador nuestro servidor inicia la descarga de sus contenidos. 
-  usage_title2: "Respaldo:"
+  usage_title2: "Respaldo"
   usage2: Si desea puede respaldar los contenidos en su almacenamiento en linea preferido (actualmente sólo hay soporte para Dropbox).
-  usage_title3: "Sincronización:"
+  usage_title3: "Sincronización"
   usage3: Los contenidos serán descargados desde nuestro servidor a su computador a través el cliente de sincronización KloudKatch.
   installation1_html: "<a href=''><i class='icon-download-alt'></i>&nbsp;Instale la extensión KloudCatch para Google Chrome</a> a traves el Chrome Web Store (soporte para más navegadores pronto!)"
   installation2_html: "<a href=''><i class='icon-download-alt'></i>&nbsp;Descargue</a> e instale el cliente de sincronización KloudCatch en su PC Windows o Mac."
