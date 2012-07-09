@@ -10,33 +10,35 @@
           %li= link_to I18n.t(:how_title), "#how", :data => {:toggle => "tab"}
         .tab-content
           #what_is_it.tab-pane.active
-            %strong
-              %em KloudCatch
-            %p=t :what_text
             .well
-              %dl.dl-horizontal
-                %dt.indent
-                  %i.icon-question-sign{:stlye => "font-size: 1.2em;"}
-                %dd= t :question1
-            .well
-              %dl.dl-horizontal
-                %dt.indent
-                  %i.icon-question-sign{:stlye => "font-size: 1.2em;"}
-                %dd= t :question2
-            .clearfix
-              .image.right= image_tag "home.png"
-              %strong
+              %h3
                 %em KloudCatch
-              = t :solution_html
-              %p
-                %ul.icons
-                  %li.icon-chevron-right=t :main_advantages1
-                  %li.icon-chevron-right=t :main_advantages2
-                  %li.icon-chevron-right=t :main_advantages3
-                  %li.icon-chevron-right=t :main_advantages4
+              =t :what_text
+              .mt_2em.alert.alert-info
+                .clearfix
+                  .left{:style => "font-size:25px;"}
+                    %i.icon-question-sign
+                  .left{:style => "margin-left: 10px;"}
+                    %strong= t :ask_yourself
+                .mt_1em
+                  %ul.icons
+                    %li.icon-chevron-right= t :question1
+                    %li.icon-chevron-right= t :question2
+              .mt_2em.clearfix
+                .image.right= image_tag "home.png"
+                = t :solution1
+                %strong
+                  %em KloudCatch
+                = t :solution_html
+                %p
+                  %ul.icons
+                    %li.icon-thumbs-up=t :main_advantages1
+                    %li.icon-thumbs-up=t :main_advantages2
+                    %li.icon-thumbs-up=t :main_advantages3
+                    %li.icon-thumbs-up=t :main_advantages4
           #how.tab-pane
-            .clearfix
-              .image.right= image_tag "howitworks.png"
+            .well
+              %h3= t(:how_title)
               %dl.dl-horizontal.wide
                 %dt
                   %span.badge.badge-warning 1
@@ -50,6 +52,8 @@
                 %dt
                   %span.badge.badge-warning 4
                 %dd=t :how_it_works4
+              .mt_2em
+                %center= image_tag "howitworks.png"
     #watch_video.tab-pane
       .well.white
         %center= '<iframe src="http://player.vimeo.com/video/35883879" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>'.html_safe

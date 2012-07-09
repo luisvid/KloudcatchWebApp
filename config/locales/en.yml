@@ -1,18 +1,25 @@
 en:
+  installation_steps: Installation Steps
+  create_account_title: Create your Free User Account
+  ask_yourself: Ask yourself...
+  droplet_added: URL succesfully added to your KloudCatch account!
   file_added_on: File added on
   usage_title1: "Download"
-  usage1: Just click in the KloudCatch button in your browser toolbar an our server will start downloading your content.
+  usage1: Just click the KloudCatch button in your browser toolbar or your bookmarks and our server will start downloading your content.
   usage_title2: "Backup"
-  usage2: If you wish, the files will be backed up in your preferred online storage (currently only Dropbox supported).
+  usage2: By default, all files will be backed up in your Dropbox account.
   usage_title3: "Synchronization"
   usage3: The files will be downloaded to your computer through the KloudCatch client app.
-  installation1_html: "<a href=''><i class='icon-download-alt'></i>&nbsp;Install the KloudCatch extension for Google Chrome</a> via the Chrome Web Store (support for more browsers soon)."
-  installation2_html: "<a href=''><i class='icon-download-alt'></i>&nbsp;Download</a> and install the KloudCatch Synchronization Client in your Windows PC or Mac."
+  installation1_html: "<a href=''><i class='icon-download-alt'></i>&nbsp;Install the KloudCatch extension for Google Chrome</a> via the Chrome Web Store (support for more browsers soon) "
+  bookmark_instructions1: or drag and drop this 
+  bookmark_instructions2: to your browsers favourites.
+  installation2_html: "<a href=''><i class='icon-download-alt'></i>&nbsp;Download</a> and install the KloudCatch Synchronization Client for your Windows PC or Mac."
   installation3_html: "<a href=''><i class='icon-download-alt'></i>&nbsp;Get the iPhone application</a> from the App Store to save video directly from your mobile device (iPhone, iPad and iPod Touch supported)."
   signin_and_signup: Sign In | Sign Up
   sign_up_info: Sign up for a FREE account
   use_it: Usage
   installation: Installation
+  provider: Provider
   type: Type
   your_password_hint_is: "Your password hint is:"
   email_not_found: No corresponding record found!
@@ -67,6 +74,8 @@ en:
   account: My Account
   languages: Languages
   signin: Sign In
+  signin_alert1: Please, first
+  signin_alert2: to your user account to proceed!
   signin_link: Sign In with your user account
   signed_in: "Welcome back %{username}!"
   signup2: Sign Up
@@ -88,38 +97,38 @@ en:
   features: Features
   home_intro: allows you to download web content automatically while browsing and then synchronize it on the user's computer in an easy and safe way!
   main_advantages_title_html: "The <span class='label'>main advantages</span> of <strong><em>KloudCatch</em></strong> are:"
-  main_advantages1: It keeps proof of evidence of Web Content.
+  main_advantages1: It keeps proof of evidence of web content.
   main_advantages2: It avoids distrust that the information saved in a cloud storage service can be accessed or removed.
   main_advantages3: It allows the user to go on with other tasks releasing him from controlling the download.
-  main_advantages4: It allows downloads from mobile devices.
+  main_advantages4: It simplifies downloads on mobile devices.
   how_title: How does it work?
-  how_it_works1_html: The user chooses the content to download only by clicking in the button that is installed by the extension for his favorite browser.
-  how_it_works2: The extension identifies the content the user wishes to download and sends our servers the information.
-  how_it_works3: From this moment on the downloading operation is in charge of our servers and the user is released of controlling it.
-  how_it_works4: When this operation is finished, the files will be synchronized to the user's computer and optionally backed up in a cloud storage service.
+  how_it_works1_html: The user chooses the content to download only by clicking the button added to his favorite browser.
+  how_it_works2: The installed browser extension or bookmarklet identifies the content the user wishes to download and sends that information over to our servers.
+  how_it_works3: From this moment on, the downloading process is completely controlled by our servers releasing the user from supervising it.
+  how_it_works4: Once the download has finished, the corresponding files will be backed up in the cloud and synchronized to the user's computer.
   what_title: What is it?
-  what_text: is a web research service that enables the automatic and unattended web content download and its later synchronization in the user's computer in a safe way.
-  question1: Has it ever happened to you that important information you bookmared to check later like posts, videos or articles suffered modifications in its content or even it was not available when you needed it due to system falls, political pressure or censure?
-  question2: And have you ever felt distrust that the information you saved in a cloud storage service could be accessed or removed by the provider?
-  solution_html: "brings you the <span class='label'>solution</span>:"
+  what_text: is a web research service that offers automatic and unattended download of web content and its later synchronization to the user's computer in a safe way.
+  question1: Have you ever suffered information modification or loss once you revisited internet content you initially considered important?
+  question2: Have you ever experienced slow download speed - especially on mobile devices - and rather prefered to go on with other tasks instead of waiting for the download to finish?
+  solution1: "If so, "
+  solution_html: "is your <strong>solution</strong>:"
   what_is_it_advantages1: It allows the user to go on with other tasks, close the browser or even turn off the computer releasing him from controlling the download. This feature is especially useful while travelling or using mobile devices.
-  what_is_it_advantages2: It solves the needs of keeping the complete information unlike clipping services that only store the URL or portions of sites.
+  what_is_it_advantages2: Our service solves the need of keeping complete original content, unlike clipping services that only store the URL or portions of sites.
   what_is_it_advantages3: It avoids distrust that the information saved in a cloud storage service can be accessed or removed due to legal reasosn or policital pressure.
   mobile_devices_title: Mobile Devices
-  mobile_devices_html: "<p><strong><em>KloudCatch</em></strong> allows to start downloads from mobile devices that would be impossible due to the limited resources of space, memory and connection.</p><p>Additionally, the service lets you save videos from mobile devices on our servers in the same time it is being recorded.</p>"
+  mobile_devices_html: "<p>our service allows you to trigger downloads on mobile devices regardless of any space, memory and connection limits and videos can be saved to our servers meanwhile they are displayed on your device.</p>"
   automatic_download_title: Automatic Download
   automatic_download: It is only necessary to click on the toolbar button and the download starts without the user's intervention and without the need of emailing attachments, uploading to online storage sites or using online drivers.
   sync_title: Synchronization
-  sync: Once the files are downloaded they will be synchronized through a client program running on the user's computer. 
+  sync: Once the files are downloaded and backed up in the cloud, they will be synchronized through our client software running on the user's computer. 
   complete_title: Keep Complete Info
-  complete: It solves the need of keeping the complete information unlike web clipping services that only store the URL or portions of sites.
   distrust_title: Avoid Distrust
-  distrust: Avoiding distrust that the information can be removed by the suppliers of the service due to legal reasons or political pressure.
+  distrust: Our service avoids distrust that online information may be removed in the long run.
   target_users_title: Target Users
-  target_users_html: "We want to present <strong><em>KloudCatch</em></strong> as a tool for information research on the Web for both individuals and professionals:"
-  target_users1: People who want to save and back up the resources found in the web, in an easy and automatic way and want to share them through social webs.
-  target_users2: People who want to do research work in an individual basis or in a professional way like journalists.
-  target_users3: Companies or workgroups that need to share among them the research done by their members.
+  target_users_html: "our service is targeted to both individuals and professionals who need to back up online information."
+  target_users2_html: "Who will benefit from <strong><i>KloudCatch</i></strong>?"
+  target_users1: People who want to save, back up and share the resources found in the web in an easy and automatic way.
+  target_users2: People who want to do online research and need to assure reference consistency.
   use_cases_title: Use Cases
   use_cases: "Some examples of use are:"
   use_cases1: To collect sources for current projects like news research, product comparison or academic writing.
@@ -153,6 +162,8 @@ en:
     password: Pet's name, son's name, etc.
   alerts:
     email_empty: Please specify your email!
+    no_url_param: "Sorry, but you have to specify an URL to add it to your KloudCatch account!"
+    existing_url: URL already added to your KloudCatch account!
 
   time:
     formats:
@@ -184,6 +195,7 @@ en:
   activerecord:
     created_at: Created At
     successfully_updated: Successfully updated!
+    error: There was an error!
     statuses:
       pending: Pending
       downloading: Downloading

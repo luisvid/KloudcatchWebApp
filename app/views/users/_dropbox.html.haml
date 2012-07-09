@@ -7,12 +7,12 @@
         %input.boolean.optional{:name => "user[delete_files]", :type => "checkbox", :value => "1", :id => "user_delete_files", :checked => @user.delete_files ? "checked" : nil}
           %p.help-block= " #{I18n.t(:delete_storage_files, :scope => [:hints])}".html_safe
   .controls
-    %a.btn.btn-danger.disable_dropbox{:href => "#", :data => {:confirm => I18n.t(:disable_dropbox, :scope => [:confirms]), :url => "/users/#{@user.id}/disable_dropbox"}}= "<i class='icon-off'></i> #{I18n.t(:disable_dropbox)}".html_safe
+    %a.btn.btn-danger.btn-small.disable_dropbox{:href => "#", :data => {:confirm => I18n.t(:disable_dropbox, :scope => [:confirms]), :url => "/users/#{@user.id}/disable_dropbox"}}= "<i class='icon-off'></i> #{I18n.t(:disable_dropbox)}".html_safe
 - else
   .control-group
     %label.control-label= I18n.t(:access)
     .controls
-      %a.btn.btn-success{:href => authorize_dropbox_users_path}= "<i class='icon-off icon-white'></i> #{I18n.t(:authorize)}".html_safe
+      %a.btn.btn-success.btn-small{:href => authorize_dropbox_users_path}= "<i class='icon-off icon-white'></i> #{I18n.t(:authorize)}".html_safe
   .well.warning
     %span.label.label-important= t :important
     %div{:style => "margin-top: 10px;"}= t :activate_dropbox_html

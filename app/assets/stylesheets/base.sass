@@ -53,13 +53,19 @@ $corp_orange: #ffad23
 .mt_1em
   margin-top: 1em
 
+.mt_2em
+  margin-top: 2em
+
+.alert-grey
+  background-color: $tabGrey
+  color: $white
 
 // Widget classes
 
 .navbar
   border-bottom: 1px solid $corp_blue_brighter
   .brand
-    background: url("/assets/logo2.png") no-repeat center left
+    background: url("/assets/logo.png") no-repeat center left
     padding: 12px 20px 9px 67px
     margin-left: 0
     a
@@ -205,6 +211,7 @@ $corp_orange: #ffad23
   &.wide
     dd
       margin-left: 35px
+      margin-bottom: 20px
 
 .modal
   padding: 30px
@@ -270,6 +277,11 @@ body
     //&.help-block
       padding-left: 20px
 
+  ul
+    &.icons
+      li
+        margin-bottom: 10px
+
   legend
     color: $corp_orange
 
@@ -290,19 +302,6 @@ body
     textarea
       width: auto
       height: 150px
-  #logo
-    background: url("/assets/logo.png") no-repeat center bottom
-    position: absolute
-    top: 5px
-    left: 50%
-    margin-left: -80px
-    width: 160px
-    height: 130px
-    color: #fff
-    font-family: "Special Elite", cursive
-    font-weight: bold
-    font-size: 30px
-    line-height: 28px
 
   #player
     width: 350px

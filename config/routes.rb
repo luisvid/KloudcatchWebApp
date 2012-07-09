@@ -29,6 +29,7 @@ KloudcatchNew::Application.routes.draw do
   get '/pending' => 'droplets#pending'
   post '/upload' => 'droplets#upload'
   
+  match '/create_droplet' => 'droplets#create_droplet', :via => :get
   match '/subscribe' => 'users#subscribe', :via => [:post, :get]
   match '/unsubscribe' => 'users#unsubscribe', :via => :delete
   match '/login' => 'sessions#client_login'

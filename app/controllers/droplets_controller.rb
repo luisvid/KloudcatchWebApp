@@ -1,5 +1,5 @@
 class DropletsController < ApplicationController
-  skip_before_filter :require_login, :only => [:upload, :create, :index, :update, :destroy, :show, :basic_auth_login, :confirm, :synch, :pending]
+  skip_before_filter :require_login, :only => [:upload, :create, :create_droplet, :index, :update, :destroy, :show, :basic_auth_login, :confirm, :synch, :pending]
   skip_before_filter :verify_authenticity_token
   before_filter :require_login_from_http_basic, :only => [:basic_auth_login]
 
@@ -63,6 +63,35 @@ class DropletsController < ApplicationController
     @droplet = Droplet.find(params[:id])
   end
 
+  def create_droplet
+    @alert = false
+    @message = I18n.t(:droplet_added)
+    if current_user
+      if params[:url]
+        if current_user.droplets.existing_url(params[:url]).size > 0
+          @alert = true
+          @message = I18n.t(:existing_url, :scope => [:alerts])
+        else
+          @droplet = Droplet.new
+          @droplet.url = params[:url]
+          @droplet.user ||= current_user
+          @droplet.status ||= Status.find_by_name("pending")
+          unless @droplet.save
+            @alert = true
+            @message = I18n.t(:error, :scope => [:activerecord])
+          end
+        end
+      else
+        @alert = true
+        @message = I18n.t(:no_url_param, :scope => [:alerts])
+      end
+    else
+      @alert = true
+      @message = "not authenticated!"
+    end
+    render "droplets/create_droplet.js.erb"
+  end
+
   def create
     if current_user
       user = current_user
@@ -70,23 +99,38 @@ class DropletsController < ApplicationController
       user = login(params[:email], params[:password], true)
     end
     if user
-      @droplet = Droplet.new(params[:droplet])
-      @droplet.url = params[:url] if params[:url].present?
-      @droplet.user ||= user
-      @droplet.status ||= Status.find_by_name("pending")
-
-      respond_to do |format|
-        if @droplet.save
-          format.html { redirect_to @droplet, notice: 'Droplet was successfully created.' }
-          format.json { render json: @droplet, status: :created, location: @droplet }
-        else
-          format.html { render action: "new" }
-          format.json { render json: @droplet.errors, status: :unprocessable_entity }
+      @droplet = nil
+      if params[:droplet]
+        @droplet = Droplet.new(params[:droplet])
+      elsif params[:url]
+        @droplet = Droplet.new
+        @droplet.url = params[:url]
+      end
+      if @droplet
+        @droplet.user ||= user
+        @droplet.status ||= Status.find_by_name("pending")
+        respond_to do |format|
+          if @droplet.save
+            format.html { redirect_to @droplet, notice: 'Droplet was successfully created.' }
+            format.json { render json: @droplet, status: :created, location: @droplet }
+          else
+            format.html { render action: "new" }
+            format.json { render json: @droplet.errors, status: :unprocessable_entity }
+          end
+        end
+      else
+        respond_to do |format|
+          format.html {render :text => "no droplet data specified!"}
+          format.json {render :json => {"message" => "no droplet data specified!"}, :status => :ok}
         end
       end
     else
       flash[:warning] = I18n.t(:auth_required)
-      redirect_to signin_path
+      respond_to do |format|
+        format.html {redirect_to signin_path}
+        format.json {render :json => {"message" => "not authenticated!"}, :status => :unauthorized}
+      end
+      
     end
   end
 

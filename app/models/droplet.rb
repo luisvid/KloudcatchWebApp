@@ -1,5 +1,6 @@
 class Droplet < ActiveRecord::Base
   scope :pending, where(:status_id => Status.find_by_name("pending").id, :in_queue => false)
+  scope :existing_url, lambda {|url| where(:url => url)}
   belongs_to :user
   belongs_to :status
   has_many :droplet_histories, :dependent => :destroy

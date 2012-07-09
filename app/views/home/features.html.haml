@@ -13,47 +13,47 @@
           %li= link_to "<i class='icon-user'></i>&nbsp;#{I18n.t(:target_users_title)}".html_safe, "#target_users", :data => {:toggle => "tab"}
           %li= link_to "<i class='icon-star'></i>&nbsp;#{I18n.t(:use_cases_title)}".html_safe, "#use_cases", :data => {:toggle => "tab"}
         .tab-content
-          #automatic_download.tab-pane.active.pb_20
-            .clearfix
-              .left{:style => "margin-right: 30px;"}= image_tag "unattended.png"
-              %h3= t :automatic_download_title
+          #automatic_download.tab-pane.active
+            %h3= t :automatic_download_title
+            .well.mt_1em
               =t :automatic_download
-          #sync.tab-pane.pb_20
-            .clearfix
-              .left{:style => "margin-right: 30px;"}= image_tag "sync.png"
-              %h3= t :sync_title
+              .mt_1em= image_tag "unattended.png"
+          #sync.tab-pane
+            %h3= t :sync_title
+            .well.mt_1em
               =t :sync
-          #complete.tab-pane.pb_20
-            .clearfix
-              .left{:style => "margin-right: 30px;"}= image_tag "complete.png"
-              %h3= t :complete_title
-              =t :complete
-          #distrust.tab-pane.pb_20
-            .clearfix
-              .left{:style => "margin-right: 30px;"}= image_tag "distrust.png"
-              %h3= t :distrust_title
+              .mt_1em= image_tag "sync.png"
+          #complete.tab-pane
+            %h3= t :complete_title
+            .well.mt_1em
+              =t :what_is_it_advantages2
+              .mt_1em= image_tag "complete.png"
+          #distrust.tab-pane
+            %h3= t :distrust_title
+            .well.mt_1em
               =t :distrust
-          #mobile_devices.tab-pane.pb_20
-            .clearfix
-              .left{:style => "margin-right: 30px;"}= image_tag "mobile.png"
-              %h3= t :mobile_devices_title
+              .mt_1em= image_tag "distrust.png"
+          #mobile_devices.tab-pane
+            %h3= t :mobile_devices_title
+            .well.mt_1em
               =t :mobile_devices_html
-          #target_users.tab-pane.pb_20
-            .clearfix
-              .left{:style => "margin-right: 30px;"}= image_tag "users.png" 
-              %h3= t :target_users_title
+              .mt_1em= image_tag "mobile.png"
+          #target_users.tab-pane
+            %h3= t :target_users_title
+            .well.mt_1em
               =t :target_users_html
+              .mt_1em= t :target_users2_html
               %p
                 %ul.icons
                   %li.icon-ok=t :target_users1
                   %li.icon-ok=t :target_users2
-                  %li.icon-ok=t :target_users3
-          #use_cases.tab-pane.pb_20
-            .clearfix
-              .left{:style => "margin-right: 30px;"}= image_tag "cases.png" 
-              %h3=t :use_cases
+              .mt_1em= image_tag "users.png" 
+          #use_cases.tab-pane
+            %h3=t :use_cases
+            .well.mt_1em
               %p
                 %ul.icons
                   %li.icon-ok=t :use_cases1
                   %li.icon-ok=t :use_cases2
                   %li.icon-ok=t :use_cases3
+              .mt_1em= image_tag "cases.png" 

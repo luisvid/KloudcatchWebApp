@@ -10,14 +10,21 @@
           %li= link_to "<i class='icon-refresh'></i>&nbsp;#{I18n.t(:use_it)}".html_safe, "#use", :data => {:toggle => "tab"}
         .tab-content
           #signup.tab-pane.active
-            .pb_20= link_to "<i class='icon-user'></i>&nbsp;#{I18n.t(:sign_up_info)}".html_safe, signup_path, :class => "btn btn-success"
+            %h3= t :create_account_title
+            .well.mt_1em
+              = link_to "<i class='icon-user'></i>&nbsp;#{I18n.t(:sign_up_info)}".html_safe, signup_path, :class => "btn btn-success"
           #installation.tab-pane
-            .well
+            %h3= t :installation_steps
+            .well.mt_1em
               %dl.dl-horizontal.wide
                 %dt
                   %span.badge.badge-warning 1
                 %dd
                   =t :installation1_html
+                  = t :bookmark_instructions1
+                  %a.btn.btn-mini.btn-primary{:href => "javascript:function _ldjq(){var a=document.createElement('SCRIPT');a.src='http://code.jquery.com/jquery-latest.pack.js';document.getElementsByTagName('HEAD')[0].appendChild(a);setTimeout(function(){$.noConflict();jQuery.ajax({url:'#{CustomHelper.app_url}/create_droplet',dataType:'jsonp',data:{url:location.href}})},500)}_ldjq();"} KloudCatch Bookmarklet
+
+                  = t :bookmark_instructions2
             .well
               %dl.dl-horizontal.wide
                 %dt
@@ -31,16 +38,18 @@
                 %dd
                   =t :installation3_html
           #use.tab-pane
-            .well
-              .left{:style => "margin-right: 30px;"}= image_tag "mobile_small.png"
-              %h3= t :usage_title1
+            %h3= t :usage_title1
+            .well.mt_1em
               =t :usage1
-            .well
-              .left{:style => "margin-right: 30px;"}= image_tag "distrust_small.png"
+              .mt_1em= image_tag "mobile_small.png"
+            .mt_2em
               %h3= t :usage_title2
+            .well.mt_1em
               =t :usage2
-            .well
-              .left{:style => "margin-right: 30px;"}= image_tag "sync_small.png"
+              .mt_1em= image_tag "distrust_small.png"
+            .mt_2em
               %h3= t :usage_title3
+            .well.mt_1em
               =t :usage3
+              .mt_1em= image_tag "sync_small.png"
 

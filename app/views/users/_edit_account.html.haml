@@ -11,7 +11,7 @@
         = f.input :password_hint, :as => :string, :disabled => !@user.errors.messages.has_key?(:password_hint), :placeholder => I18n.t(:password, :scope => [:placeholders]), :input_html => {:class => "password_field"}
   .well
     %label.main= I18n.t(:storage, :scope => [:activerecord, :attributes, :droplet])
-    = f.input :account_id, :collection => Account.all, :label_method => :description, :value_method => :id, :prompt => nil, :label => I18n.t(:type)
+    = f.input :account_id, :collection => Account.all, :label_method => :description, :value_method => :id, :prompt => nil, :label => I18n.t(:provider)
     #dropbox= render :partial => "dropbox"
   .form-actions.with_well
-    %button.btn.btn-primary{:type => "submit", :data => {:toggle => "button"}}= "<i class='icon-refresh icon-white'></i> #{I18n.t(:update_account_settings)}".html_safe
+    %button.btn.btn-primary.btn-large{:type => "submit", :data => {:toggle => "button"}}= "<i class='icon-refresh icon-white'></i> #{I18n.t(:update_account_settings)}".html_safe

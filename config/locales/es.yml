@@ -1,18 +1,25 @@
 es:
+  installation_steps: Pasos de Instalación
+  create_account_title: Registre su Cuenta de Usuario Gratuita
+  ask_yourself: Reflexione...
+  droplet_added: URL exitosamente agregado a su cuenta KloudCatch!
   file_added_on: Archivo creado el
   usage_title1: "Descarga"
-  usage1:  Con un simple clic en el botón KloudCatch que aparece en la barra de herramientas de su navegador nuestro servidor inicia la descarga de sus contenidos. 
+  usage1:  Con un simple clic en el botón KloudCatch que aparece en la barra de herramientas de su navegador o en los bookmarks nuestro servidor inicia la descarga de sus contenidos. 
   usage_title2: "Respaldo"
-  usage2: Si desea puede respaldar los contenidos en su almacenamiento en linea preferido (actualmente sólo hay soporte para Dropbox).
+  usage2: Por defecto, todos los contenidos serán respaldados en su cuenta Dropbox.
   usage_title3: "Sincronización"
   usage3: Los contenidos serán descargados desde nuestro servidor a su computador a través el cliente de sincronización KloudKatch.
-  installation1_html: "<a href=''><i class='icon-download-alt'></i>&nbsp;Instale la extensión KloudCatch para Google Chrome</a> a traves el Chrome Web Store (soporte para más navegadores pronto!)"
+  installation1_html: "<a href=''><i class='icon-download-alt'></i>&nbsp;Instale la extensión KloudCatch para Google Chrome</a> a traves el Chrome Web Store (soporte para más navegadores pronto!) "
+  bookmark_instructions1: o arrastre y coloque este 
+  bookmark_instructions2: a los favoritos de su navegador web.
   installation2_html: "<a href=''><i class='icon-download-alt'></i>&nbsp;Descargue</a> e instale el cliente de sincronización KloudCatch en su PC Windows o Mac."
   installation3_html: "<a href=''><i class='icon-download-alt'></i>&nbsp;Instale la aplicación para iPhone</a> del App Store para poder guardar video directamente de su dispositivo móvil (soporte para iPhone, iPad y iPod Touch)."
   signin_and_signup: Ingresar | Registrar
   sign_up_info: Registre su cuenta de usuario GRATUITA
   use_it: Uso
   installation: Instalación
+  provider: Proveedor
   type: Tipo
   your_password_hint_is: "Su ayuda es:"
   email_not_found: No hay registros correspondientes!
@@ -67,6 +74,8 @@ es:
   account: Mi Cuenta
   languages: Idiomas
   signin: Ingresar
+  signin_alert1: Por favor, debe 
+  signin_alert2: a su cuenta de usario para proceder!
   signin_link: Ingrese con su cuenta de usuario
   signed_in: "Bienvenido %{username}!"
   signup2: Registro
@@ -94,29 +103,31 @@ es:
   main_advantages4: Permite realizar descargas desde dispositivos móviles.
   how_title: Cómo funciona?
   how_it_works1_html: El usuario inicia la descarga con tan solo un clic en el botón instalado en su navegador.
-  how_it_works2: La extensión envia a KloudCatch la dirección del contenido que desea descargar.
+  how_it_works2: La extensión o el bookmarklet envia a KloudCatch la dirección del contenido que desea descargar.
   how_it_works3: A partir de este momento la descarga queda a cargo de nuestros servidores, liberando al usuario de controlar el proceso.
-  how_it_works4: Una vez finalizada la descarga, los archivos son sincronizados en el equipo del usuario y opcionalmente guardados en un proveedor de almacenamiento en la nube.
+  how_it_works4: Una vez finalizada la descarga, los archivos son respaldados en un almacenamiento en la nube y luego sincronizados con en el equipo del usuario.
   what_title: Que es?
-  what_text: es un servicio que permite la descarga de contenidos web de forma automática y desatendida y su posterior sincronización en la computadora del usuario.
-  question1: Alguna vez le pasó que información importante que marcó para ver luego cómo notas periodísticas, videos o posts sufrieron modificaciones en su contenido o incluso ya no estaban disponibles cuando los necesitaba debido a caídas del sistema, censura o presión política?
-  question2: Alguna vez sintió desconfianza que la información guardada en un almacenamiento en la nube pueda ser accedida o eliminada por el proveedor del servicio?
-  solution_html: "te entrega la <span class='label'>solución</span>:"
+  what_text: es un servicio que permite descargar contenidos web de forma automática y desatendida y su posterior sincronización con la computadora del usuario.
+  question1: Alguna vez le pasó que información importante que marcó para ver luego cómo notas periodísticas, videos o posts sufrieron modificaciones en su contenido o incluso ya no estaban disponibles cuando los necesitaba?
+  question2: Alguna vez prefirió seguir con otras tareas en vez de esperar la descarga de contenido web - sobre todo con baja velocidad de descarga?
+  solution1: Si es así, 
+  solution_html: "le entrega la <strong>solución</strong>:"
   what_is_it_advantages1: Permite al usuario continuar con otras tareas, cerrar el navegador o incluso apagar su computar liberándolo de controlar el proceso de descarga. Es especialmente útil cuando se está de viaje o utilizando dispositivos móviles.
-  what_is_it_advantages2: Permite al usuario poseer la información completa, a diferencia de los servicios de web clipping qeu sólo almacenan la URL o partes de la información. 
+  what_is_it_advantages2: Permite al usuario poseer la información completa, a diferencia de los servicios de web clipping que sólo almacenan la URL o partes de la información. 
   what_is_it_advantages3: Evita la desconfianza de que la información guardada en un servicio de almacenamiento en la nube pueda ser accedido o eliminado.
   mobile_devices_title: Dispositivos móviles
   mobile_devices_html: "<p><strong><em>KloudCatch</em></strong> permite iniciar descargas desde dispositivos que de otra forma no serían posibles debido a recursos limitados de dichos dispositivos.</p><p>Adicionalmente, el servicio permite guardar en nuestros servidores videos de dispositivos móviles en el mismo momento en que se están grabando.</p>"
   automatic_download_title: Descarga automática
   automatic_download: Sólo es necesario hacer clic en un botón y la descarga comienza automáticamente sin necesidad de intervención por parte del usuario.
   sync_title: Sincronización
-  sync: Una vez finalizada la descarga los archivos son sincronizados a través de un programa cliente instalado en la computadora del usuario.
+  sync: Una vez finalizados la descarga y el respaldo de los archivos, éstos se sincronizan a través de un programa cliente instalado en la computadora del usuario.
   complete_title: Guardar información completa
   complete: Permite al usuario guardar la información completa a diferencia de los servicios de web clipping que sólo almacenan la URL o partes de la información.
   distrust_title: Evitar la desconfianza
   distrust: Evita la desconfianza de que la información guardada en un servicio de almacenamiento en la nube pueda ser accedida o eliminada.
   target_users_title: Usuarios
   target_users_html: "Queremos presentar a <strong><em>KloudCatch</em></strong> como una herramienta tanto para individuos como para profesionales:"
+  target_users2_html: "A quién le sirve <strong><i>KloudCatch</i></strong>?"
   target_users1: Personas que deseen guardar y hacer back-up de contenidos encontrados en la Web de forma fácil y automática.
   target_users2: Personas que realicen trabajos de investigación de forma personal o profesional, cómo por ejemplo periodistas.
   target_users3: Grupos de trabajo o empresas que necesiten compartir entre si la investigación realizada por sus miembros, cómo por ejemplo periódicos o cadenas de noticias.
@@ -153,6 +164,8 @@ es:
     password: Nombre mascota, hijo, etc.
   alerts:
     email_empty: Debe especificar su email!
+    no_url_param: Lo sentimos - debe especificarse una URL para agregarla a su cuenta KloudCatch!
+    existing_url: URL ya fue agregada a su cuenta KloudCatch!
 
   time:
     formats:
@@ -184,6 +197,7 @@ es:
   activerecord:
     created_at: Fecha Creación
     successfully_updated: Exitosamente actualizado!
+    error: Hubo un error!
     statuses:
       pending: Pendiente
       downloading: Descargando
