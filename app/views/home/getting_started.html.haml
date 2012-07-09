@@ -22,7 +22,7 @@
                 %dd
                   =t :installation1_html
                   = t :bookmark_instructions1
-                  %a.btn.btn-mini.btn-primary{:target => "_blank", :href => "javascript:function _ldjq(){var a=document.createElement('SCRIPT');a.src='http://code.jquery.com/jquery-latest.pack.js';document.getElementsByTagName('HEAD')[0].appendChild(a);setTimeout(function(){$.noConflict();jQuery.ajax({url:'#{CustomHelper.app_url}/create_droplet',dataType:'jsonp',data:{url:location.href}})},500)}_ldjq();"} KloudCatch Bookmarklet
+                  %a.btn.btn-mini.btn-primary{:href => "javascript:function _ldjq(){var a=document.createElement('SCRIPT');a.src='http://code.jquery.com/jquery-latest.pack.js';document.getElementsByTagName('HEAD')[0].appendChild(a);setTimeout(function(){$.noConflict();jQuery.ajax({url:'#{CustomHelper.app_url}/create_droplet',dataType:'jsonp',data:{url:location.href}})},500)}_ldjq();"} KloudCatch Bookmarklet
 
                   = t :bookmark_instructions2
             .well
