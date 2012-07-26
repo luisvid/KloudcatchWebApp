@@ -1,13 +1,12 @@
 .container
   .row
     .span4
-      .pull-left
-        - if I18n.locale.to_s == "es"
-          = link_to_unless_current "<i class='icon-flag'></i>&nbsp;&nbsp;English Site".html_safe, locale: "en"
-        - else
-          = link_to_unless_current "<i class='icon-flag'></i>&nbsp;&nbsp;Sitio en Español".html_safe, locale: "es"
+      - if I18n.locale.to_s == "es"
+        = link_to_unless_current "<i class='icon-flag'></i>&nbsp;&nbsp;English Site".html_safe, locale: "en"
+      - else
+        = link_to_unless_current "<i class='icon-flag'></i>&nbsp;&nbsp;Sitio en Español".html_safe, locale: "es"
     .span4
-      %center= link_to "<i class='icon-envelope icon-white'></i>&nbsp;&nbsp;#{I18n.t(:contact_us)}".html_safe, new_contact_path
+      = link_to "<i class='icon-envelope icon-white'></i>&nbsp;&nbsp;#{I18n.t(:contact_us)}".html_safe, new_contact_path
     .span4
-      .pull-right= "&#169; #{Time.now.year.to_s} KloudCatch".html_safe
+      = "&#169; #{Time.now.year.to_s} KloudCatch".html_safe
 

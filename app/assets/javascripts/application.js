@@ -14,7 +14,6 @@
 //= require jquery_ujs
 //= require dataTables/jquery.dataTables
 //= require bootstrap-transition
-//= require bootstrap-modal
 //= require bootstrap-collapse
 //= require bootstrap-dropdown
 //= require bootstrap-tab

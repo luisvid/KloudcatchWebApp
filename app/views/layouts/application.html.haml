@@ -2,7 +2,7 @@
 %html
   %head
     %title KloudCatch
-    = stylesheet_link_tag "http://fonts.googleapis.com/css?family=Special+Elite"
+    = stylesheet_link_tag "http://fonts.googleapis.com/css?family=Fredoka+One"
     = stylesheet_link_tag    "application", :media => "all"
     = javascript_include_tag "application"
     =yield(:javascript)
@@ -12,21 +12,12 @@
     #root
       #locale.hidden= I18n.locale
       = render :partial => "layouts/nav"
-      - unless current_user
-        #signin_form.modal.fade
-          %a.close{:data => {:dismiss => "modal"}} x
-          .tabbable
-            %ul.nav.nav-tabs.white
-              %li.active= link_to I18n.t(:signin), "#signin_tab", :data => {:toggle => "tab"}
-              %li= link_to I18n.t(:signup), "#signup_tab", :data => {:toggle => "tab"}
-            .tab-content.white
-              #signin_tab.tab-pane.active= render :template => "sessions/new_modal"
-              #signup_tab.tab-pane= render :template => "users/new_modal"
       .container
         - flash.each do |name, msg|
           .alert{:class => name.eql?(:success) ? "alert-success" : name.eql?(:error) ? "alert-error" : nil}
             %a.close{:data => {:dismiss => "alert"}} x
             = msg
         #content.content= yield
-        #root_footer
-    #footer= render :partial => "layouts/footer"
+      #root_footer
+    #footer
+      = render :partial => "layouts/footer"
