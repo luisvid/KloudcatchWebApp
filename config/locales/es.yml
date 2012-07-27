@@ -76,11 +76,11 @@ es:
   signin: Ingresar
   signin_alert1: Por favor, debe 
   signin_alert2: a su cuenta de usario para proceder!
-  signin_link: Ingrese con su cuenta de usuario
+  signin_link: O ingrese con su cuenta de usuario!
   signed_in: "Bienvenido %{username}!"
   signup2: Registro
   signup: Registrar
-  create_account: Crea una nueva cuenta de usuario
+  create_account: O crea una nueva cuenta de usuario!
   signed_up: Cuenta de usuario exitosamente creada!
   signout: Salir
   signed_out: Salió exitosamente de su cuenta!

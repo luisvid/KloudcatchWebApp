@@ -76,11 +76,11 @@ en:
   signin: Sign In
   signin_alert1: Please, first
   signin_alert2: to your user account to proceed!
-  signin_link: Sign In with your user account
+  signin_link: Or sign in with your user account!
   signed_in: "Welcome back %{username}!"
   signup2: Sign Up
   signup: Sign Up
-  create_account: Sign Up for a new user account
+  create_account: Or sign up for a new user account!
   signed_up: User account successfully created!
   signout: Sign Out
   signed_out: Successfully signed out from your account!
