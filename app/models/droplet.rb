@@ -44,8 +44,8 @@ class Droplet < ActiveRecord::Base
   def upload(name, data)
     dir = File.join(Configuration::DOWNLOAD_PATH, user.email)
     FileUtils.makedirs(dir)
-    self.name = name
-    self.file = File.join(dir, name)
+    self.name = name.to_s.gsub(/ /,'_').gsub(/\W+/, '')[0...64]
+    self.file = File.join(dir, self.name)
     File.open(self.file, 'wb' ) do |file|
       file.write(data.read)
     end
